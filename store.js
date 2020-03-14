@@ -10,11 +10,6 @@ const init = async () => (
   })
 )
 
-module.exports = {
-  init,
-  createTask
-}
-
 const createTask = async (title) => (
   new Promise((resolve, reject) => {
     const generator = storage.TableUtilities.entityGenerator
@@ -29,3 +24,8 @@ const createTask = async (title) => (
     })
   })
 )
+
+module.exports = {
+  init,
+  createTask
+}
